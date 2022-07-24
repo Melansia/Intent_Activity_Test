@@ -4,28 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ReceiveMessageActivity">
 
-    <EditText
-        android:id="@+id/etEnterMessage"
+    <TextView
+        android:id="@+id/tvMessageView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/enter_message"
         android:layout_margin="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnSendMessage"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/send_message"
-        android:onClick="onClickSendMsg"
-        android:layout_margin="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEnterMessage" />
 </androidx.constraintlayout.widget.ConstraintLayout>
