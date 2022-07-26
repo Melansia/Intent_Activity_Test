@@ -16,6 +16,12 @@ class ReceiveMessageActivity : AppCompatActivity() {
         tvMessageView = findViewById(R.id.tvMessageView)
 
         val msg = intent.getStringExtra("msg")
-        tvMessageView.text = msg
+//        tvMessageView.text = msg
+
+        val intent = Intent (Intent.ACTION_SEND)
+        intent.type = "text/plain"
+        intent.putExtra(Intent.EXTRA_TEXT, msg)
+        val chosenIntent = Intent.createChooser(intent, getString(R.string.chooser_title))
+        startActivity(chosenIntent)
     }
 }
